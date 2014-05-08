@@ -1,5 +1,5 @@
 ---
-# site.yml is the main .yml for ie ansible. 
+# site.yml is the main .yml for ansible. 
 # all host groups should only be called from here.
 # all tasks should be in a role which is associated with one or more host groups
 
