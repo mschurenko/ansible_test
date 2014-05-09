@@ -1,0 +1,20 @@
+---
+# site.yml is the main .yml for ie ansible. 
+# all host groups should only be called from here.
+# all tasks should be in a role which is associated with one or more host groups
+
+- hosts: render_nodes
+  roles:
+    - common
+    - render
+
+- hosts: workstations
+  roles:
+    - common
+    - workstation
+
+- hosts: aspera
+  roles:
+    - common
+    - server
+    - server_ha

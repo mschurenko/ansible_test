@@ -1,0 +1,13 @@
+---
+-
+  hosts: tag_Role_proxy
+  tasks:
+    - name: create file
+      action: lineinfile create=yes dest=/tmp/{{ ec2_id }} line={{ ec2_region }}
+
+-
+  hosts: us-west-2
+  tasks:
+    - name: create xxx 
+      action: lineinfile create=yes dest=/tmp/{{ ec2_state }} line='xxx'
+      when: location == 'aws'
